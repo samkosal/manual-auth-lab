@@ -3,7 +3,14 @@ const homePage = (req, res) => {
 };
 
 const dashboardPage = (req, res) => {
-    res.render("dashboard", { title: "Member Dashboard" });
+    // console.log(req.user); // Log the user object to the console
+    // ...existing code...
+    
+    res.render("dashboard", {
+        title: "Dashboard",
+        user: req.user
+    });
+    console.log(req.user)
 };
 
 const adminPage = (req, res) => {
